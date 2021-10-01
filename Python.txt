@@ -1,0 +1,33 @@
+1) 
+a=input("Как вас зовут:_?")
+print("привет,",a)
+
+2) 
+a = float(input ("Ширина комнаты:_"))
+b = float(input("Длина комнаты:_"))
+print("S=",a*b)
+
+3)
+n = int(input("Введите последнее число последовательностей:"))
+res=0
+for i in range(1, n+1):
+    res+=i
+print("Сумма равна:", res)    
+
+4)
+Seconds,Minutes,Hours=map(int, input("Введите текст последовательности секунды, минуты, часы: ").split())
+print("Общее количество секунд равно:", Hours*3600+Minutes*60+Seconds)
+
+5)
+w=float(input("Введите массу:_"))
+h=float(input("Введите рост:_"))
+print("BMI=", w/(h*h))
+
+6)
+n=int(input("Введите целое число:_"))
+summ=0
+while n>0:
+    digit=n % 10
+    summ=summ+digit
+    n=n//10
+print("сумма цифр целого числа=", summ)
