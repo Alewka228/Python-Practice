@@ -1,0 +1,43 @@
+1)
+a=int(input("Введите число"))
+if a % 2==0:
+    print("Чётное")
+else:
+    print("Нечётное")
+
+2)
+a=int(input("Введите температуру в цельсиях"))
+print((9/5)*a+32)
+
+3)
+a=int(input("Введите число"))
+if a%5 !=0 and a%7 !=0:
+    print("00")
+elif a%5 ==0 and a%7 !=0:
+    print("01")
+elif a%5 !=0 and a%7 ==0:
+    print("10")
+elif a%5 ==0 and a%7 ==0:
+    print("11")
+
+4)
+print('Введите коэффициент квадратного уравнения a*(x^2)b*x+c=0: ')
+a= float(input('a='))
+b= float(input('b='))
+c= float(input('c='))
+
+d=(b**2)-(4*a*c)
+
+if d>0:
+    print('x1 =', (-b+d**0.5)/(2*a))
+    print('x1 =', (-b-d**0.5)/(2*a))
+elif d==0:
+    print('x=',(-b)/(2*a))
+elif d<0:
+    print('Корней нет')
+
+6)
+a=input('Введите список чисел через пробел \n')
+b=a.split(' ')
+c=len(set(b))
+print(c)
