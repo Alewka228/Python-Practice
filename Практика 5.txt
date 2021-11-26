@@ -1,0 +1,43 @@
+1)
+def Elements(array,n):
+    answer=0
+    for i in array:
+        if int(i) > n:
+            answer+=1
+    return answer
+x,n=input().split(' '),int(input())
+print(Elements(x,n)) 
+2)
+
+3)
+def writeInitials(b):
+    answer=''
+    for i in b:
+        if(i.isupper()):
+            answer+=i+'.'
+    return answer
+print(writeInitials(input()))
+4)
+
+5)
+print("ввод:  ", end=" ")
+    s=str(input())
+    print("согласные -1     гласные -2")
+    print("ввод:  ", end=" ")
+    i =int(input())
+    if i == 1:
+        n5_2(s)
+    elif i == 2:
+
+6)
+def spisok(word):
+    count = 0
+    ans=''
+    for i in word:
+        if(count < word.count(i)):
+            count=word.count(i)
+            ans=i
+    return ans
+
+word = input('Word is? ')
+print(spisok(word))
