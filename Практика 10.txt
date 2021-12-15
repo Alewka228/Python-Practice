@@ -1,0 +1,72 @@
+1)
+def fib(n):
+    if(n in [1,2]):
+        return 1
+    return fib(n-1)+fib(n-2)
+
+print(fib(4))
+
+2)
+Сложность O(n^2)
+
+3)
+fib_memory={
+    1:1,
+    2:1
+}
+
+def fib(n):
+    result=fib_memory.get(n)
+    if(result is None):
+        result=fib(n-1)+fib(n-2)
+        fib_memory[n]=result
+    return result
+
+print(fib(200))
+
+4)
+видим за O(2*N) ~ O(N)?
+
+5)
+fib_memory={
+    1:1,
+    2:1
+}
+
+def fib(n):
+    result=0
+    i=3
+    while i <=n:
+        fib_memory[i]=fib_memory[i-1]+fib_memory[i-2]
+        i+=1
+    return fib_memory[n]
+
+
+print(fib(13))
+
+6)
+array=[1,23,42,323,54,3,52346765,363,4645,867,53,6,23,435,7,56452,4,854,35,78,656,478,978654,342,1,687,987,4635]
+array=sorted(array)
+def interpol_search(a,key):
+    left=0
+    right=len(a)-1
+    res=True
+    while(a[left] < key and key < a[right]):
+        mid=midlle = left + int(((right - left)/(a[right]-a[left]))*(key - a[left]))
+        if(a[mid]<key):
+            left=mid+1
+        elif(a[mid]>key):
+            right=mid-1
+        else:
+            return mid
+
+    if(a[left]==key):
+        return left
+    elif(a[right]==key):
+        return right
+    else:
+        return -1
+
+
+ans=interpol_search(array,7)
+print(ans)
